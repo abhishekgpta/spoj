@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){ 
+ unsigned long long num;
+ scanf("%llu",&num);
+ while(num>1){
+     if(num %2==0){
+        num = num/2;
+        //printf("%llu\n",num);
+        }else break;
+                                          
+ }
+// printf("\n%llu",num);
+ if(num ==1){
+    printf("TAK");
+ }
+ else printf("NIE");
+ return 0;
+}
+
+
