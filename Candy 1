@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int n,i,ans=0,sum=0,temp=0;
+    int arr[10001];
+    scanf("%d\n",&n);
+    while(n !=-1){
+        sum =0;
+        temp= 0;
+        ans=0;
+        for(i=0;i<n;i++){
+            scanf("%d\n",&arr[i]);
+            }
+            temp =  arr[n-1];
+             for(i=0;i<n;i++){
+                 sum = sum + arr[i];
+             }
+             if(sum%n==0){
+                 for(i=0;i<n;i++){
+                 if(sum/n>arr[i])
+                 ans = ans +sum/n-arr[i];
+                 }
+                 printf("%d\n",ans);
+             }else printf("%d\n",-1);
+             scanf("%d",&n);
+        }    
+    return 0;
+    }
