@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main(){
+    int t,i,n,j,sum,temp,d,k;
+    int m[1000],f[1000];
+    scanf("%d",&t);
+    for(i=t;i>=1;i--){
+        sum = 0;
+        scanf("%d",&n);
+        for(j=0;j<n;j++){
+            scanf("%d",&m[j]);
+        }    
+        for(j=0;j<n;j++){
+            scanf("%d",&f[j]);
+        }
+        for(k=1;k<n;k++){
+            d=k;
+            while(d>0&&m[d]<m[d-1]){
+                temp=m[d];
+               m[d] = m[d-1];
+               m[d-1] = temp;
+                d--;
+            }
+        }
+            for(k=1;k<n;k++){
+                d=k;
+            while(d>0&&f[d]<f[d-1]){
+                temp=f[d];
+               f[d] = f[d-1];
+               f[d-1] = temp;
+                    d--;
+            }
+            }
+            for(j=0;j<n;j++){
+               sum = sum+m[j]*f[j];
+            }
+            printf("%d\n",sum);
+        }
+        return 0;
+        
+    }
