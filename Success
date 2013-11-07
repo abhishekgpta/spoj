@@ -1,1 +1,2 @@
+/*print success in shortest code*/
 main(){j0(!printf("%m"));}
