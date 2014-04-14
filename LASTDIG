@@ -1,0 +1,26 @@
+#include <stdio.h>
+long long po(long long n,long long m){
+	 long long c=1;
+	while(m){
+		if(m%2){
+			c=(c*n)%10;
+		}
+		m>>=1;
+		n=(n*n)%10;
+	}
+	return c;
+}	
+int main(void) {
+	 int t;
+	 long long c,n,m;
+	scanf("%d",&t);
+	while(t!=0){
+		scanf("%lld%lld",&n, &m);
+		c=po(n,m);
+		printf("%lld\n",c);
+		t--;
+	}
+	// your code goes here
+	return 0;
+}
+
