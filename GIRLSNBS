@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void) {
+	int g,n=0,b,m=0;
+	scanf("%d %d",&g,&b);
+	while(g!=-1 && b!=-1){
+		if(g==0 && b==0) printf("0\n");
+		else if(g==b && g!=0){
+			printf("1\n");
+		}
+		else if(g==0){
+			printf("%d\n",b);
+		}
+		else if(b==0){
+			printf("%d\n",g);
+		}
+		else{
+			if(g>b){
+				b++;
+				n=g/b;
+				m=g%b;
+				if(m==0){
+					printf("%d\n",n);
+				}
+				else
+				printf("%d\n",n+1);
+			}
+			else{
+				g++;
+				n=b/g;
+				m=b%g;
+				if(m==0){
+					printf("%d\n",n);
+				}
+				else
+				printf("%d\n",n+1);
+			}
+		}
+		scanf("%d %d",&g,&b);
+	}
+	// your code goes here
+	return 0;
+}
+
